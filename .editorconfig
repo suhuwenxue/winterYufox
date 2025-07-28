@@ -1,0 +1,66 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size 
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{c,cpp,h,hpp,cc,hh}]
+indent_size = 2
+
+[*.py]
+indent_size = 2
+max_line_length = 120
+
+[*.{java,kt}]
+indent_size = 4
+
+# 新增 Android 专用配置
+[*.{xml,pro}]
+indent_size = 4
+indent_style = space
+
+[*.gradle]
+indent_size = 4
+indent_style = space
+
+[*.kts]
+indent_size = 4  # 继承 Kotlin 配置
+
+[*.{md,txt}]
+trim_trailing_whitespace = false
+
+[CMakeLists.txt]
+indent_size = 2
+
+[*.cmake]
+indent_size = 2
+
+[Makefile]
+indent_style = tab
+
+[*.vcxproj]
+indent_size = 2
+end_of_line = crlf
+
+[*.{cs,csproj}]
+indent_size = 2
+
+[*.{sh,bash}]
+indent_size = 2
+shell = bash
+
+# 新增平台脚本配置
+[*.ps1]
+indent_size = 2
+shell = pwsh
+
+# 新增 TypeScript/JavaScript 配置
+[*.{ts,tsx,js,jsx}]
+indent_size = 2
+
+[*.{md,txt}]
+trim_trailing_whitespace = false

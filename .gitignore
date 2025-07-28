@@ -1,0 +1,80 @@
+# 通用操作系统生成文件
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+desktop.ini
+
+# IDE相关文件
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.njsproj
+*.sln
+*.iml
+
+# 编译产物
+*.o
+*.a
+*.so
+*.exe
+*.dll
+*.lib
+*.obj
+*.class
+*.jar
+*.war
+*.pyc
+__pycache__/
+.pytest_cache/
+
+# 构建系统
+build/
+dist/
+CMakeCache.txt
+CMakeFiles/
+install_manifest.txt
+*.cmake
+Makefile
+
+# 包管理
+venv/
+.env/
+env/
+*.egg-info/
+.gradle/
+.mvn/
+target/
+
+# Android特定
+local.properties
+*.apk
+*.aab
+*.keystore
+app/build/
+
+# 日志和测试
+*.log
+*.tmp
+test-results/
+coverage/
+
+# VS2022项目文件
+.vs/
+x64/
+x86/
+Win32/
+*.vcxproj.filters
+*.vcxproj.user
+
+# CMake生成文件
+CMakeSettings.json
+CMakeUserPresets.json
+
+# 本地配置文件
+.env
+.env.local
+.env.development
+.env.production
