@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.21)
 
-if(NOT DEFINED ENV{LLVM_HOME})
-    message(FATAL_ERROR "LLVM_HOME environment variable not set!")
-endif()
-if(NOT DEFINED ENV{VCPKG_HOME})
-  message(FATAL_ERROR "VCPKG_HOME environment variable not set!")
-endif()
+#if(NOT DEFINED ENV{LLVM_HOME})
+#    message(FATAL_ERROR "LLVM_HOME environment variable not set!")
+#endif()
+#if(NOT DEFINED ENV{VCPKG_HOME})
+#  message(FATAL_ERROR "VCPKG_HOME environment variable not set!")
+#endif()
 # set(CMAKE_C_COMPILER    $ENV{LLVM_HOME}/bin/clang)
 # set(CMAKE_CXX_COMPILER  $ENV{LLVM_HOME}/bin/clang++)
 
@@ -32,33 +32,36 @@ if(NOT CMAKE_CXX_COMPILER)
   endif()
 endif()
 
-set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_HOME}/scripts/buildsystems/vcpkg.cmake"
-    CACHE STRING "Vcpkg toolchain file")
-
 project(winterYufox
   VERSION 0.0.1
   DESCRIPTION "A framework for winterYufox"
   LANGUAGES CXX
 )
 
-option(BUILD_WINTERYUFOX_FRAMEWORKCLI_PROJECT   "Build winterYufox Framework Cli Project" ON)
-option(BUILD_WINTERYUFOX_FRAMEWORKLIB_CORE      "Build winterYufox Framework Lib Core" ON)
-option(BUILD_WINTERYUFOX_FRAMEWORKLIB_LOCALE    "Build winterYufox Framework Lib LOCALE" ON)
-option(BUILD_WINTERYUFOX_FRAMEWORKLIB_PLUGINS   "Build winterYufox Framework Lib Plugins" ON)
+#option(BUILD_WINTERYUFOX_FRAMEWORKCLI_PROJECT   "Build winterYufox Framework Cli Project" ON)
+#option(BUILD_WINTERYUFOX_FRAMEWORKLIB_CORE      "Build winterYufox Framework Lib Core" ON)
+#option(BUILD_WINTERYUFOX_FRAMEWORKLIB_LOCALE    "Build winterYufox Framework Lib LOCALE" ON)
+#option(BUILD_WINTERYUFOX_FRAMEWORKLIB_PLUGINS   "Build winterYufox Framework Lib Plugins" ON)
+#option(BUILD_WINTERYUFOX_FRAMEWORKLIB_UPDATER   "Build winterYufox Framework Lib Updater" ON)
+#
+#if(BUILD_WINTERYUFOX_FRAMEWORKCLI_PROJECT)
+#  add_subdirectory(winteryuufox/framework/tools/wfox)
+#endif()
+#
+#if(BUILD_WINTERYUFOX_FRAMEWORKLIB_CORE)
+#  add_subdirectory(winteryuufox/framework/library/core)
+#endif()
+#
+#if(BUILD_WINTERYUFOX_FRAMEWORKLIB_LOCALE)
+#  add_subdirectory(winteryuufox/framework/library/locale)
+#endif()
+#
+#if(BUILD_WINTERYUFOX_FRAMEWORKLIB_PLUGINS)
+#  add_subdirectory(winteryuufox/framework/library/plugins)
+#endif()
+#
+#if(BUILD_WINTERYUFOX_FRAMEWORKLIB_UPDATER)
+#  add_subdirectory(winteryuufox/framework/library/updater)
+#endif()
 
-if(BUILD_WINTERYUFOX_FRAMEWORKCLI_PROJECT)
-  add_subdirectory(framework/tools/wfox)
-endif()
-
-if(BUILD_WINTERYUFOX_FRAMEWORKLIB_CORE)
-  add_subdirectory(framework/library/core)
-endif()
-
-if(BUILD_WINTERYUFOX_FRAMEWORKLIB_LOCALE)
-  add_subdirectory(framework/library/locale)
-endif()
-
-if(BUILD_WINTERYUFOX_FRAMEWORKLIB_PLUGINS)
-  add_subdirectory(framework/library/plugins)
-endif()
 
